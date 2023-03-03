@@ -1,0 +1,67 @@
+<div style="margin-top: 50px;">
+    <div class="submit-form">
+        <div *ngIf="!submitted">
+        <div class="form-group">
+            <label for="title" style="font-size: 30px;font-family: Arial, Helvetica, sans-serif;font-style: italic;">Title</label>
+                <input
+                type="text"
+                class="form-control"
+                id="title"
+                required
+                [(ngModel)]="books.title"
+                name="title"
+                placeholder="Add book title"
+              /> 
+            
+        </div>
+        <div class="form-group">
+            <label for="author" style="font-size: 30px;font-family: Arial, Helvetica, sans-serif;font-style: italic;">Author</label>
+                <input
+                type="text"
+                class="form-control"
+                id="author"
+                required
+                [(ngModel)]="books.author"
+                name="author"
+                placeholder="Add book author"
+              /> 
+            
+        </div>
+        <div class="form-group">
+            <label for="description" style="font-size: 30px;font-family: Arial, Helvetica, sans-serif;font-style: italic;">Description</label>
+                <input
+                type="text"
+                class="form-control"
+                id="description"
+                required
+                [(ngModel)]="books.description"
+                name="description"
+                placeholder="Add book description"
+              /> 
+            
+        </div>
+        <div class="form-group" style="font-size: 30px;font-family: Arial, Helvetica, sans-serif;font-style: italic;">
+            <label for="cost">Cost</label>
+                <input
+                type="number"
+                class="form-control"
+                id="cost"
+                required
+                [(ngModel)]="books.cost"
+                name="cost"
+                placeholder="Add book cost"
+              /> 
+            
+        </div>
+        <div>
+            <button class="btn btn-success" (click)="addBook()">Submit</button>
+        </div>
+    </div>
+        <div *ngIf="submitted">
+          <h3>Book was added successfully</h3>
+          <button class="btn btn-success" (click)="newTutorial()">Add new book</button>
+        </div>
+
+</div>
+    
+
